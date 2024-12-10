@@ -1,0 +1,25 @@
+{
+    "name": "video-upload-app",
+    "version": "1.0.0",
+    "description": "A React app for uploading and viewing videos",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel index.html --open --no-cache"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^5.5.2",
+        "@wavesurfer/react": "^1.0.7",
+        "antd": "4.24.13",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-dropzone": "^14.0.0",
+        "video.js": "^7.20.3",
+        "wavesurfer-react": "^3.0.4",
+        "wavesurfer.js": "^7.8.10"
+    },
+    "devDependencies": {
+        "buffer": "^6.0.3",
+        "parcel": "^2.12.0",
+        "process": "^0.11.10"
+    }
+}
