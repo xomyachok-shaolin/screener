@@ -1,0 +1,293 @@
+/* Стили для контейнера приложения */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+/* Стиль для строки меню */
+.menu-bar {
+    background-color: #f0f0f0;
+    width: 100%;
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid #007bff;
+ 
+}
+
+/* Горизонтальная линия */
+.horizontal-line {
+    height: 1px;
+    background-color: #007bff;
+    width: 100%;
+}
+
+/* Боковая панель с видео */
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-right: 1px solid #007bff;
+    height: calc(100vh - 50px);
+    width: 350px !important;
+    flex-shrink: 0; /* Фиксируем ширину */
+    float: left;
+    flex: 0 0 350px !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+}
+
+/* Элементы списка видео */
+.video-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.video-item:hover {
+    background-color: #e6f7ff;
+}
+
+/* Стили для основного контента */
+.main-content {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Кнопка загрузки */
+.upload-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    padding-bottom: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Стили для зоны перетаскивания файлов */
+.dropzone {
+    border: 2px dashed #007bff;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #e9e9e9;
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.video-js {
+    width: 1000px !important;
+    max-width: 1000px;
+    height: 400px; /* Увеличена высота */
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+/* Таймлайн видео */
+.timeline {
+    position: relative;
+    background-color: #e9e9e9;
+    height: 18px;
+    width: 900px;
+    margin-top: 20px;
+    margin-left:30px;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #007bff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Стили для чекбокса и кнопки меню */
+.video-item .ant-checkbox-wrapper {
+    margin-right: 10px;
+}
+
+.video-item .ant-btn {
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.video-item .ant-btn:hover {
+    background-color: #e6f7ff;
+}
+
+.current-time {
+    position: absolute;
+    background-color: red; 
+    width: 2px; 
+    height: 18px; 
+    bottom: 0;
+    transform: translateX(-50%);
+    pointer-events: none; /* Чтобы не мешать кликам */
+}
+
+.video-container video {
+    width: 1000px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#waveform {
+  width: 80%;
+  height: 50px;
+  background-color: #000;
+}
+
+.video-controls {
+    width: 940px;
+    margin: 0 auto; /* Центрирование */
+    display: block; /* Для соблюдения правил центрирования */
+    display: flex;
+    padding-left: 220px;
+    align-items: center !important;
+    text-align: center;
+    margin: auto;
+    justify-content: start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.control-button {
+    font-size: 24px; /* Размер иконок */
+    color: #474343; /* Цвет кнопок */
+    margin: 0 5px; /* Отступ между кнопками */
+}
+  
+.control-button:hover {
+    color: #007bff; /* Цвет при наведении */
+}
+  
+.video-controls-panel {
+    background-color: #f5f5f5; /* Фон панели управления */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+} 
+  
+.control-button-plus {
+    margin: 0 5px;
+}
+  
+.video-time {
+    margin-right: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.zoom-container {
+    display: flex;
+    gap: 2px; /* Расстояние между ZoomIn и ZoomOut */
+} 
+
+  /* Контейнер громкости */
+.volume-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Иконка громкости */
+.volume-icon {
+    font-size: 20px; /* Размер иконки */
+    color: #474343; /* Цвет иконки */
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.volume-icon:hover {
+    color: #1890ff; /* Цвет при наведении */
+}
+
+.volume-slider {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    transform: translateY(-10px);
+    height: 100px;
+    z-index: 10;
+}
+
+.volume-slider .ant-slider {
+    height: 100%; /* Увеличить высоту слайдера */
+}
+
+.volume-slider .ant-slider-rail {
+    background-color: #e8e8e8;
+}
+
+.volume-slider .ant-slider-track {
+    background-color: #1890ff;
+}
+
+.volume-slider .ant-slider-handle {
+    border: 2px solid #1890ff;
+    box-shadow: none;
+}
+
+.player-controls-right {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Промежуток в 5px между кнопками */
+}
+
+.menu-item {
+    position: relative;
+    text-align: center;
+}
+  
+.menu-item .dot {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+}
+  
+
+
